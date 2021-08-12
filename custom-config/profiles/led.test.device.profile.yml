@@ -1,0 +1,101 @@
+name: "LED-Test-Device-Profile"
+manufacturer: "iot"
+model: "LED-DEVICE"
+description: "Test device profile"
+labels:
+  - "mqtt"
+  - "test"
+  - "rpi"
+deviceResources:
+  -
+    name: light-blue
+    isHidden: true
+    description: "Get the current temperature"
+    properties:
+      valueType: "Bool"
+      readWrite: "RW"
+  -
+    name: light-red
+    isHidden: true
+    description: "Get the current temperature"
+    properties:
+      valueType: "Bool"
+      readWrite: "RW"
+  -
+    name: light-green
+    isHidden: true
+    description: "Get the current temperature"
+    properties:
+      valueType: "Bool"
+      readWrite: "RW"
+  # -
+  #   name: message
+  #   isHidden: false
+  #   description: "device message"
+  #   properties:
+  #     valueType: "String"
+  #     readWrite: "RW"
+
+deviceCommands:
+  -
+    name: on-light-blue
+    readWrite: "W"
+    isHidden: false
+    resourceOperations:
+        - { deviceResource: "light-blue" }
+        - { deviceResource: "light-red" }
+        - { deviceResource: "light-green" }
+  # -
+  #   name: on-light-blue
+  #   readWrite: "W"
+  #   isHidden: false
+  #   resourceOperations:
+  #       - { 
+  #           deviceResource: "light-blue",
+  #           defaultValue: true
+  #         }
+  # -
+  #   name: off-light-blue
+  #   readWrite: "W"
+  #   isHidden: false
+  #   resourceOperations:
+  #       - { 
+  #           deviceResource: "light-blue",
+  #           defaultValue: false
+  #         }
+  # -
+  #   name: on-light-green
+  #   readWrite: "W"
+  #   isHidden: false
+  #   resourceOperations:
+  #       - { 
+  #           deviceResource: "light-green",
+  #           defaultValue: true
+  #         }
+  # -
+  #   name: off-light-green
+  #   readWrite: "W"
+  #   isHidden: false
+  #   resourceOperations:
+  #       - { 
+  #           deviceResource: "light-green",
+  #           defaultValue: false
+  #         }
+  # -
+  #   name: on-light-red
+  #   readWrite: "W"
+  #   isHidden: false
+  #   resourceOperations:
+  #       - { 
+  #           deviceResource: "light-green",
+  #           defaultValue: true
+  #         }
+  # -
+  #   name: off-light-blue
+  #   readWrite: "W"
+  #   isHidden: false
+  #   resourceOperations:
+  #       - { 
+  #           deviceResource: "light-green",
+  #           defaultValue: false
+  #         }

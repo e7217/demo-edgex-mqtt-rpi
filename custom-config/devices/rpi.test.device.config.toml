@@ -1,0 +1,13 @@
+# Pre-define Devices
+[[DeviceList]]
+  Name = 'RPI-Test-Device'
+  ProfileName = 'RPI-Test-Device-Profile'
+  Description = 'MQTT device is created for test purpose'
+  Labels = [ 'MQTT', 'test', 'rpi' ]
+  [DeviceList.Protocols]
+    [DeviceList.Protocols.mqtt]
+       CommandTopic = 'CommandTopic'
+    [[DeviceList.AutoEvents]]
+       Interval = '30s'
+       OnChange = false
+       SourceName = 'message'

@@ -1,0 +1,40 @@
+name: "RPI-Test-Device-Profile"
+manufacturer: "iot"
+model: "RPI-DEVICE"
+description: "Test device profile"
+labels:
+  - "mqtt"
+  - "test"
+  - "rpi"
+deviceResources:
+  -
+    name: temperature
+    isHidden: true
+    description: "Get the current temperature"
+    properties:
+      valueType: "Float32"
+      readWrite: "R"
+  -
+    name: humidity
+    isHidden: true
+    description: "Get the current humidity"
+    properties:
+      valueType: "Float32"
+      readWrite: "R"
+  # -
+  #   name: message
+  #   isHidden: false
+  #   description: "device message"
+  #   properties:
+  #     valueType: "String"
+  #     readWrite: "RW"
+
+# deviceCommands:
+#   -
+#     name: values
+#     readWrite: "R"
+#     isHidden: false
+#     resourceOperations:
+#         - { deviceResource: "temperature" }
+#         - { deviceResource: "humidity" }
+        # - { deviceResource: "message" }
