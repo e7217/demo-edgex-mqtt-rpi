@@ -68,8 +68,8 @@ EdgeX에 디바이스 Profile을 등록하는 방법은 3가지가 있다.
       # custom-config
       DEVICE_DEVICESDIR: /custom-config/devices
       DEVICE_PROFILESDIR: /custom-config/profiles
-      MQTTBROKERINFO_HOST: 118.67.130.122
-      MQTTBROKERINFO_PORT: 1774
+      MQTTBROKERINFO_HOST: xxx.xxx.xxx.xxx
+      MQTTBROKERINFO_PORT: xxxx
       ...
 ...
     volumes:
